@@ -20,14 +20,15 @@ version = runtimeProperties.libraryVersion.get() // Project-level version
 kotlin {
 
     applyComposeTargets(
-        namespace = "${BuildConst.packageName}.ui.foundation",
-        xcfName = "UiFoundationKit"
+        namespace = "${BuildConst.packageName}.runtime.lifecycle",
+        xcfName = "RuntimeLifecycleKit"
     )
 
     sourceSets {
         commonMain {
             dependencies {
-                implementation(compose.foundation)
+                api(compose.runtime)
+                api(libs.androidx.lifecycle.runtimeCompose)
             }
         }
 

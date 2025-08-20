@@ -35,7 +35,7 @@ plugins {
 includeBuild("build-logic")
 
 include(
+    ":runtime-lifecycle",
     ":ui-foundation",
-
     ":gallery:composeApp"
 )
